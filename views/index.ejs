@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Todo List
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+
+    <main>
+        <h1>TODO LIST</h1>
+        <form action="/add" method="post">
+            <input type="text" name="items" placeholder="Enter items....." required><br><br>
+            <button type="submit"><span>ADD</span></button>
+        </form>
+        <br>
+    </main>
+        <div id="list-items">
+            
+                <% for(let i=0;i<items.length;i++){ %>
+                <div id="<%= items[i]._id%>" class="item-div">
+                    <div class="first-div">
+                        <%= items.length-i %>&emsp;
+                            <input type="checkbox" class="checkbox" onchange="checkItems(event)" <% if(items[i].check == true){ %>checked<% } %>>   
+                        <h2>&emsp;<%= items[i].item %> </h2>
+                        
+                    </div>
+                    <div class="img-div">
+                            <img src="/image/cross.png" onclick="deleteItems(event)">
+                    </div>
+                </div>
+            <% } %>
+        </div>
+
+    </form>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

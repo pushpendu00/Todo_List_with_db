@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* background:linear-gradient(45deg,rgb(14, 140, 194),rgb(52, 225, 21),rgb(136, 0, 255)); */
+    background: linear-gradient(45deg,rgb(255, 113, 255),rgb(185, 86, 255),rgb(118, 118, 255),rgb(138, 237, 138),rgb(231, 231, 59),rgb(251, 199, 104),rgb(255, 61, 61));
+    /* background:radial-gradient(rgb(14, 140, 194),rgb(52, 225, 21),rgb(136, 0, 255)); */
+}
+
+/* body::-webkit-scrollbar{
+    display: none;
+} */
+
+@media only screen and (max-width:500px) {
+    #list-items{
+        /* height: 100%; */
+        width: 100%;
+    }
+}
+@media only screen and (min-width:501px)and (max-width:700px){
+    #list-items{
+        /* height: 40%; */
+        width: 80%;
+    }
+}
+@media only screen and (min-width:701px){
+    #list-items{
+        /* height: 40%; */
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    form input{
+        font-size: larger;
+    }
+    form button span{
+        font-size:large;
+    }
+}
+@media only screen and (min-width:401px) {
+    form input{
+        font-size:x-large;
+    }
+    form button span{
+        font-size:x-large;
+    }
+}
+
+main{
+    padding-top: 100px;
+    /* background-color: rgb(128, 128, 128); */
+    /* background: linear-gradient(-45deg,rgb(255, 186, 255),rgb(214, 157, 255),rgb(192, 192, 255),rgb(162, 255, 162),rgb(255, 255, 179),rgb(255, 224, 166),rgb(255, 163, 163)); */
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+form{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+form button{
+    margin-left: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(39, 255, 39);
+    border-radius: 5px;
+}
+#list-items{
+    height: 70vh;
+    overflow-x: scroll;
+}
+
+#list-items::-webkit-scrollbar{
+    display: none;
+}
+.item-div{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.first-div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+}
+.first-div input{
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+.img-div{
+    height: 100%;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 5px;
+}
+
+.img-div img{
+    height: 70%;
+}
+
+.img-div img:hover{
+    height: 90%;
+    cursor: pointer;
+}
+
